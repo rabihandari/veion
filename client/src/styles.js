@@ -1,13 +1,14 @@
 import { createMuiTheme } from '@material-ui/core'
 
-export const theme = createMuiTheme({
+export const darkTheme = createMuiTheme({
     typography: {
       fontFamily: [
         '"DM Sans"',
         'sans-serif'
       ].join(','),
+      
       allVariants: {
-          color: '#FFF'
+          color: '#FFF',
       },
       body1: {
         color: '#FFFFFF96'
@@ -18,8 +19,11 @@ export const theme = createMuiTheme({
     },
     palette: {
       primary: {
-        main: '#45b1f5'
-      }
+        main: '#45b1f5',
+        dark: '#0075bf'
+      },
+      
+      
     },
     overrides: {
       MuiContainer: {
@@ -27,7 +31,39 @@ export const theme = createMuiTheme({
         
       },
     }
-    
-    
 });
+
+export const lightTheme = createMuiTheme({
+    typography: {
+      fontFamily: [
+        '"DM Sans"',
+        'sans-serif'
+      ].join(','),
+      
+      allVariants: {
+          color: '#000',
+      },
+      body1: {
+        color: '#00000096'
+      },
+      body2: {
+        color: '#00000096'
+      }
+    },
+    palette: {
+      primary: {
+        main: '#45b1f5',
+        dark: '#0075bf'
+      },
+      
+    },
+    overrides: {
+      MuiContainer: {
+        maxWidthLg: '1000px',
+        
+      },
+    }
+});
+
+
 

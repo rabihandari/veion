@@ -1,8 +1,17 @@
 import { makeStyles } from '@material-ui/core'
 
 export default makeStyles((theme) => ({
+    mainContainer: {
+        position: 'fixed',
+        zIndex: '1',
+        width: '100%',
+        transition: '0.3s'
+    },
     container: {
         padding: '20px 20px',
+        [theme.breakpoints.down('xs')]: {
+            padding: '10px 20px',
+        }
     },
     navLink: {
         color: 'white',
@@ -28,5 +37,20 @@ export default makeStyles((theme) => ({
         '&:hover': {
             border: '1px solid #ffffff73',
         },
+    },
+    drawerPaper: {
+        width: '75%'
+    },
+    listContainer: {
+        backgroundColor: '#212121',
+        height: '100%',
+    },
+    listItem: {
+        padding: '10px 20px'
+    },
+    logoContainer: {
+        padding: '20px 20px',
+        marginTop: '20px',
+        textAlign: 'center' ,
     }
 }))

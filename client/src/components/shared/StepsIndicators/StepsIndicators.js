@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Typography, Grid, useMediaQuery } from '@material-ui/core';
 import { useInView } from 'react-intersection-observer';
 import { useTheme } from '@material-ui/core/styles'
-
+import AOS from 'aos';
+import "aos/dist/aos.css";
 
 import useStyles from './styles'
 
@@ -14,6 +15,13 @@ const StepsIndicators = (props) => {
         threshold: 0,
         triggerOnce: true
       })
+
+    useEffect(() => {
+        AOS.init({
+            duration : 1000,
+            once: true
+        });
+    }, [])
 
     const steps_numbers = props.steps.map((step, i) => (
         <Grid item key={i}>
@@ -38,23 +46,23 @@ const StepsIndicators = (props) => {
         <Grid item key={i}>
             <Grid container alignItems="center" direction="column">
                 {(inView && i === 0) &&
-                    <div className={classes.verticalGrayLine} style={{ animationDelay: `${(i)*0.5}s` }}></div>
+                    <div className={classes.verticalGrayLine} style={{ animationDelay: `${(i)*0.6}s` }}></div>
                 }
                 <div className={classes.circle} >
                     <Typography className={classes.number}>{i + 1}</Typography>
                 </div>
                 {(inView && i < props.steps.length -1 && i >= 0) &&
-                    <div className={classes.verticalBlueLine} style={{ animationDelay: `${(i+1)*0.6}s` }}></div>
+                    <div className={classes.verticalBlueLine} style={{ animationDelay: `${(i+1)*0.7}s` }}></div>
                 }
                 {(inView && i === props.steps.length - 1) &&
-                    <div className={classes.verticalGrayLine} style={{ animationDelay: `${(i+2)*0.5}s` }}></div>
+                    <div className={classes.verticalGrayLine} style={{ animationDelay: `${(i+2)*0.6}s` }}></div>
                 }
             </Grid>
         </Grid>
     ))
 
     const steps_desc = props.steps.map((step, i) => (
-        <Grid item key={i}>
+        <Grid item key={i} data-aos={matches ? "fade-left" : "fade-up"} data-aos-duration={1000} data-aos-delay={(i) * 600}>
             <Grid container alignItems="center" style={{ width: '100%'}}>
                 {(inView) &&
                     <div>
@@ -73,7 +81,7 @@ const StepsIndicators = (props) => {
                 </Grid>
             </Grid>
             <Grid item xs={8} sm={12} className={classes.stepsContainer}>
-                <Grid container justify="center" direction={matches ? "column" : "row"} spacing={5}>
+                <Grid container justify="center" direction={matches ? "column" : "row"} spacing={5} style={{ overflow: 'hidden' }}>
                     {steps_desc.map(step => (step))}
                 </Grid>
             </Grid>

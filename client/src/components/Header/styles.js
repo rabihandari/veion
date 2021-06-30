@@ -20,7 +20,7 @@ export default makeStyles((theme) => ({
         backgroundSize: 'contain',
         backgroundPosition: 'top center',
         backgroundRepeat: 'repeat-x',
-        padding: '190px 0px 170px 0px',
+        padding: '220px 0px',
         [theme.breakpoints.down('md')]: {
             padding: '140px 20px 100px 20px',
         },

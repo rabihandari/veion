@@ -1,6 +1,7 @@
-import React from 'react'
+import React  from 'react'
 import { Grid, ThemeProvider } from '@material-ui/core'
 import { lightTheme } from '../../styles'
+import { Section } from 'react-scroll-section';
 
 import { Container, Typography } from '@material-ui/core'
 import useStyles from './styles'
@@ -21,22 +22,24 @@ const steps = [
     },
 ]
 
-const HowItWorks = () => {
+const HowItWorks = (props) => {
     const classes = useStyles();
 
     return(
         <ThemeProvider theme={lightTheme}>
-            <div className={classes.mainContainer}>
-                <Container>
-                    <Typography variant='h3' className={classes.title}>How It Works</Typography>
-                    <Typography varitan="body1" className={classes.subtitle}>We believe that designing products and services in close partnership with our clients is the only way to have a real impact on their business.</Typography>
-                    <Grid container className={classes.stepsContainer}>
-                        <Grid item md={12} style={{ width: '100%'}}>
-                            <StepsIndicators steps={steps} />
+            <Section id="how-it-works">
+                <div className={classes.mainContainer}>
+                    <Container>
+                        <Typography variant='h3' className={classes.title}>How It Works</Typography>
+                        <Typography varitan="body1" className={classes.subtitle}>We believe that designing products and services in close partnership with our clients is the only way to have a real impact on their business.</Typography>
+                        <Grid container className={classes.stepsContainer}>
+                            <Grid item md={12} style={{ width: '100%'}}>
+                                <StepsIndicators steps={steps} />
+                            </Grid>
                         </Grid>
-                    </Grid>
-                </Container>
-            </div>
+                    </Container>
+                </div>
+            </Section>
         </ThemeProvider>
     )
 }

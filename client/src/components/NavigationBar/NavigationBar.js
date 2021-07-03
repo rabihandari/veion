@@ -63,7 +63,7 @@ const NavigationBar = (props) => {
         <Container className={classes.container}>
           <Grid container alignItems='center' justify="space-between">
             <Grid item>
-              <Typography variant="h5">Veion</Typography>
+              <Typography variant="h5" style={{ fontWeight: '700' }}>Veion</Typography>
             </Grid>
             {!matches ? 
               <Grid item>

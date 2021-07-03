@@ -18,7 +18,7 @@ export default makeStyles((theme) => ({
         marginTop: '20px'
     },
     stepsContainer: {
-        padding: '60px 0px',
+        padding: '60px 0px 0px 0px',
         [theme.breakpoints.down('xs')]: {
             padding: '40px 0px',
         },

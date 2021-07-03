@@ -3,9 +3,9 @@ import { makeStyles } from '@material-ui/core'
 export default makeStyles((theme) => ({
     title: {
         fontWeight: '700',
-        fontSize: '78px',
+        fontSize: '68px',
         [theme.breakpoints.down('md')]: {
-            fontSize: '58px',
+            fontSize: '48px',
         }
     },
     secure: {

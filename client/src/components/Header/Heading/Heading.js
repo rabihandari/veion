@@ -22,6 +22,10 @@ const Heading = () => {
   
     return (
         <Section id="home">
+            <div>
+
+            </div>
+            
             <Grid container spacing={5}>
                 <Grid item md={12} data-aos="fade-up" data-aos-duration={400}>
                     <Typography variant="body1" color="primary" className={classes.secure}>SECURE / FAST / RELIABLE</Typography>

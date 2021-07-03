@@ -1,5 +1,6 @@
 import React from 'react'
-import { Container } from '@material-ui/core'
+import { Container, useTheme, useMediaQuery } from '@material-ui/core'
+import Particles from 'react-particles-js';
 
 import useStyles from './styles'
 import Heading from './Heading/Heading'
@@ -13,6 +14,7 @@ const Header = () => {
         <div className={classes.mainContainer}>
             <div className={classes.overlay}></div>
             <div className={classes.headingContainer}>
+                <HeaderParticles />
                 <Container>
                     <Heading />
                 </Container>
@@ -28,6 +30,60 @@ const Header = () => {
                 </Container>
             </div>
         </div>
+    );
+}
+
+const HeaderParticles = () => {
+    const classes = useStyles();
+    const theme = useTheme();
+    const matches = useMediaQuery(theme.breakpoints.down('sm'));
+
+    return(
+        <Particles
+            params={{
+                particles: {
+                    number: {
+                        value: matches ? 20 : 50
+                    },
+                    size: {
+                        value: 3
+                    },
+                    color: {
+                        value: theme.palette.primary.main
+                    },
+                    links: {
+                        color: theme.palette.primary.main,
+                        distance: 150,
+                        enable: true,
+                        opacity: 0.5,
+                        width: 1,
+                    },
+                    move: {
+                        speed: 2
+                    }
+                },
+                interactivity: {
+                    detect_on: 'window',
+                    events: {
+                        onhover: {
+                            enable: true,
+                            mode: "grab"
+                        },
+                    },
+                    modes: {
+                        grab: {
+                            distance: 200,
+                            line_linked: {
+                                opacity: 0.5
+                            }
+                        }
+                    }
+                    
+                },
+                
+            }}
+            canvasClassName={classes.particlesContainer}
+        />
     );
 }
 

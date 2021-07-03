@@ -1,5 +1,4 @@
 import { makeStyles } from '@material-ui/core'
-import BackgroundImage from '../../images/header_bg.png'
 
 export default makeStyles((theme) => ({
     mainContainer: {
@@ -16,7 +15,7 @@ export default makeStyles((theme) => ({
         zIndex: '-1'
     },
     headingContainer: {
-        backgroundImage: `url(${BackgroundImage})`,
+        position: 'relative',
         backgroundSize: 'contain',
         backgroundPosition: 'top center',
         backgroundRepeat: 'repeat-x',
@@ -35,4 +34,12 @@ export default makeStyles((theme) => ({
             padding: '0px 20px',
         },
     },
+    particlesContainer: {
+        position: 'absolute',
+        top: '0',
+        left: '0',
+        right: '0',
+        zIndex: '0',
+        aspectRatio: 'unset'
+    }
 }))

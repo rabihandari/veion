@@ -8,6 +8,7 @@ import HowItWorks from './components/HowItWorks/HowItWorks'
 import NavigationBar from './components/NavigationBar/NavigationBar'
 import VRMS from './components/VRMS/VRMS'
 import WhatWeDo from './components/WhatWeDo/WhatWeDo'
+import Footer from './components/Footer/Footer'
 
 const App = () => {
   
@@ -19,6 +20,7 @@ const App = () => {
         <HowItWorks/>
         <WhatWeDo />
         <VRMS />
+        <Footer />
       </ScrollingProvider>
     </ThemeProvider>
   );

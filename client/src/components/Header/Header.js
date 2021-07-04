@@ -59,7 +59,7 @@ const HeaderParticles = () => {
                         width: 1,
                     },
                     move: {
-                        speed: 2
+                        speed: 1
                     }
                 },
                 interactivity: {

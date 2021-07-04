@@ -46,16 +46,16 @@ const StepsIndicators = (props) => {
         <Grid item key={i}>
             <Grid container alignItems="center" direction="column">
                 {(inView && i === 0) &&
-                    <div className={classes.verticalGrayLine} style={{ animationDelay: `${(i)*0.6}s` }}></div>
+                    <div className={classes.verticalGrayLine} style={{ animationDelay: `${(i)*0.4}s` }}></div>
                 }
                 <div className={classes.circle} >
                     <Typography className={classes.number}>{i + 1}</Typography>
                 </div>
                 {(inView && i < props.steps.length -1 && i >= 0) &&
-                    <div className={classes.verticalBlueLine} style={{ animationDelay: `${(i+1)*0.7}s` }}></div>
+                    <div className={classes.verticalBlueLine} style={{ animationDelay: `${(i+1)*0.5}s` }}></div>
                 }
                 {(inView && i === props.steps.length - 1) &&
-                    <div className={classes.verticalGrayLine} style={{ animationDelay: `${(i+2)*0.6}s` }}></div>
+                    <div className={classes.verticalGrayLine} style={{ animationDelay: `${(i+2)*0.4}s` }}></div>
                 }
             </Grid>
         </Grid>

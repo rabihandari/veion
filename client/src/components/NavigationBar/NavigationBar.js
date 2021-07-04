@@ -59,7 +59,7 @@ const NavigationBar = (props) => {
 
   return (
     <>
-      <div className={classes.mainContainer} style={ scrollPosition > 150 ? { backgroundColor: 'rgb(0 0 0 / 77%)' } : { backgroundColor: 'transparent' } }>
+      <div className={classes.mainContainer} style={ scrollPosition > 150 ? { backgroundColor: 'rgb(255 255 255 / 12%)', backdropFilter: 'saturate(60%) blur(5px)' } : { backgroundColor: 'transparent' } }>
         <Container className={classes.container}>
           <Grid container alignItems='center' justify="space-between">
             <Grid item>

@@ -4,7 +4,7 @@ export default makeStyles((theme) => ({
     mainContainer: {
         position: 'relative',
         display: 'block',
-        backgroundColor: 'white',
+        backgroundColor: theme.palette.secondary.light,
         padding: '100px 0'
     },
     title: {

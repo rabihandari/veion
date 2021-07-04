@@ -1,6 +1,5 @@
 import React  from 'react'
-import { Grid, ThemeProvider } from '@material-ui/core'
-import { lightTheme } from '../../styles'
+import { Grid } from '@material-ui/core'
 import { Section } from 'react-scroll-section';
 
 import { Container, Typography } from '@material-ui/core'
@@ -26,21 +25,19 @@ const HowItWorks = (props) => {
     const classes = useStyles();
 
     return(
-        <ThemeProvider theme={lightTheme}>
-            <Section id="how-it-works">
-                <div className={classes.mainContainer}>
-                    <Container>
-                        <Typography variant='h3' className={classes.title}>How It Works</Typography>
-                        <Typography varitan="body1" className={classes.subtitle}>We believe that designing products and services in close partnership with our clients is the only way to have a real impact on their business.</Typography>
-                        <Grid container className={classes.stepsContainer}>
-                            <Grid item md={12} style={{ width: '100%'}}>
-                                <StepsIndicators steps={steps} />
-                            </Grid>
+        <Section id="how-it-works">
+            <div className={classes.mainContainer}>
+                <Container>
+                    <Typography variant='h3' className={classes.title}>How It Works</Typography>
+                    <Typography varitan="body1" className={classes.subtitle}>We believe that designing products and services in close partnership with our clients is the only way to have a real impact on their business.</Typography>
+                    <Grid container className={classes.stepsContainer}>
+                        <Grid item md={12} style={{ width: '100%'}}>
+                            <StepsIndicators steps={steps} />
                         </Grid>
-                    </Container>
-                </div>
-            </Section>
-        </ThemeProvider>
+                    </Grid>
+                </Container>
+            </div>
+        </Section>
     )
 }
 

@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core'
 export default makeStyles((theme) => ({
     circle: {
         borderRadius: '50px',
-        borderWidth: '1px',
+        borderWidth: '2px',
         borderStyle: 'solid',
         width: '60px',
         height: '60px',
@@ -22,7 +22,7 @@ export default makeStyles((theme) => ({
     },
     blueLine: {
         width: '300px',
-        height: '1px',
+        height: '2px',
         backgroundColor: theme.palette.primary.dark,
         transform: 'scale(0)',
         animationTimingFunction: 'ease',
@@ -45,7 +45,7 @@ export default makeStyles((theme) => ({
     },
     verticalBlueLine: {
         height: '300px',
-        width: '1px',
+        width: '2px',
         backgroundColor: theme.palette.primary.dark,
         transform: 'scale(0)',
         animationTimingFunction: 'ease',

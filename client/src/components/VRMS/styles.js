@@ -5,7 +5,7 @@ export default makeStyles((theme) => ({
     mainContainer: {
         position: 'relative',
         display: 'block',
-        padding: '100px 0px',
+        padding: '50px 0px',
         backgroundImage: `url(${BackgroundImage});`,
         backgroundSize: 'cover',
         backgroundPosition: 'center center',

@@ -7,15 +7,17 @@ import Header from './components/Header/Header'
 import HowItWorks from './components/HowItWorks/HowItWorks'
 import NavigationBar from './components/NavigationBar/NavigationBar'
 import VRMS from './components/VRMS/VRMS'
+import WhatWeDo from './components/WhatWeDo/WhatWeDo'
 
 const App = () => {
   
   return (
     <ThemeProvider theme={darkTheme}>
-      <ScrollingProvider scrollBehavior="smooth" offset={-90}>
+      <ScrollingProvider scrollBehavior="smooth" offset={-78}>
         <NavigationBar/>
         <Header />
         <HowItWorks/>
+        <WhatWeDo />
         <VRMS />
       </ScrollingProvider>
     </ThemeProvider>

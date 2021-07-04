@@ -21,7 +21,7 @@ const VRMS = () => {
                     <Grid item xs={12}>
                         <Container data-aos="fade-right">
                             <Typography variant="h3" className={classes.title}>Our Restaurants Solution</Typography>
-                            <Typography variant="body1" className={classes.subTitle}>Syberry provides turn-key software development services that add value to your business.</Typography>
+                            <Typography variant="body1" className={classes.subTitle}>We leverage the best restaurant management solution to grow your venture, scale your impact, and propel your mission forward</Typography>
                         </Container>
                     </Grid>
                     <Grid item md={7} data-aos="fade-right">

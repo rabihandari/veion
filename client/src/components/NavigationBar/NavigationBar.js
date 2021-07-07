@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Container, Typography, Grid, Divider, IconButton, SwipeableDrawer, useMediaQuery, List, ListItem, ListItemText } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles'
 import MenuIcon from '@material-ui/icons/Menu';
-import { useScrollSections } from 'react-scroll-section';
+import { useHistory } from 'react-router-dom';
 
 import useStyles from './styles'
 import OutlinedButton from '../shared/Buttons/Outlined/OutlinedButton';
@@ -11,9 +11,9 @@ import Logo from '../../images/logo-white.png';
 
 const NavigationBar = (props) => {
   const classes = useStyles();
+  const history = useHistory();
   const [scrollPosition, setScrollPosition] = useState(0);
   const [drawerOpen, setDrawerOpen] = useState(false);
-  const sections = useScrollSections();
   const matches = useMediaQuery(useTheme().breakpoints.down('xs'));
 
 
@@ -44,6 +44,7 @@ const NavigationBar = (props) => {
   }, []);
 
   const handleScroll = (e) => {
+    if (!e) return;
     setScrollPosition(window.pageYOffset);
   }
 
@@ -53,8 +54,10 @@ const NavigationBar = (props) => {
 
   const handleDrawerItemSelected = (item) => () => {
     setDrawerOpen(false);
-    sections.find(section => section.id === item.sectionId)?.onClick();
+  }
 
+  const goToHome = () => {
+    history.push('/')
   }
 
   return (
@@ -62,14 +65,14 @@ const NavigationBar = (props) => {
       <div className={classes.mainContainer} style={ scrollPosition > 150 ? { backgroundColor: 'rgb(255 255 255 / 12%)', backdropFilter: 'saturate(60%) blur(5px)' } : { backgroundColor: 'transparent' } }>
         <Container className={classes.container}>
           <Grid container alignItems='center' justify="space-between">
-            <Grid item>
-              <Typography variant="h5" style={{ fontWeight: '700' }}>Veion</Typography>
+            <Grid item onClick={goToHome}>
+              <Typography variant="h5" style={{ fontWeight: '700', cursor: 'pointer'}}>Veion</Typography>
             </Grid>
             {!matches ? 
               <Grid item>
                 <Grid container alignItems='center'>
                   {navigtionItems.map(item => (
-                    <NavigationLink key={item.title} action={sections.find(section => section.id === item.sectionId)?.onClick}>{item.title}</NavigationLink>
+                    <NavigationLink key={item.title} action={() => {}}>{item.title}</NavigationLink>
                   ))}
                   <OutlinedButton className={classes.quoteButton}>Get A Quote</OutlinedButton>
                 </Grid>

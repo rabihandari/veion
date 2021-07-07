@@ -1,28 +1,28 @@
 import React from 'react'
 import { ThemeProvider } from '@material-ui/core'
 import { darkTheme } from './styles'
-import { ScrollingProvider } from 'react-scroll-section';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 
-import Header from './components/Header/Header'
-import HowItWorks from './components/HowItWorks/HowItWorks'
+import ScrollToTop from './components/shared/ScrollToTop';
 import NavigationBar from './components/NavigationBar/NavigationBar'
-import VRMS from './components/VRMS/VRMS'
-import WhatWeDo from './components/WhatWeDo/WhatWeDo'
-import Footer from './components/Footer/Footer'
+import Footer from './components/Footer/Footer';
+import Home from './pages/Home';
+import WhatWeDo from './pages/WhatWeDo';
 
 const App = () => {
   
   return (
-    <ThemeProvider theme={darkTheme}>
-      <ScrollingProvider scrollBehavior="smooth" offset={-78}>
-        <NavigationBar/>
-        <Header />
-        <HowItWorks/>
-        <WhatWeDo />
-        <VRMS />
-        <Footer />
-      </ScrollingProvider>
-    </ThemeProvider>
+    <Router>
+      <ThemeProvider theme={darkTheme}>
+          <ScrollToTop/>
+          <NavigationBar/>
+          <Switch>
+              <Route exact path="/" render={(props) => <Home {...props}/> }/>
+              <Route exact path="/what-we-do" render={(props) => <WhatWeDo {...props}/> }/>
+          </Switch>
+          <Footer />
+      </ThemeProvider>
+    </Router>
   );
 }
 

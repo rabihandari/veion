@@ -3,7 +3,6 @@ import { Grid, useMediaQuery } from '@material-ui/core';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from 'react-responsive-carousel';
 import { useTheme } from '@material-ui/core/styles'
-import { Section } from 'react-scroll-section';
 
 import useStyles from './styles'
 
@@ -71,19 +70,17 @@ const Technologies = () => {
     const technologylists = getTechnologiesLists();
     
     return (
-        <Section id="technologies">
-            <Carousel showIndicators={false} showThumbs={false} showStatus={false} className={classes.container} emulateTouch={true}>
-                {technologylists.map((technologyList, index) => (
-                    <Grid container justify="center" spacing={5} key={index} >
-                        {technologyList.map(technology => (
-                            <Grid item xs={4} sm={3} md={2} key={technology.title} className={classes.imageContainer}>
-                                <img src={technology.image} alt={technology.title} className={classes.logo} />
-                            </Grid>
-                        ))}
-                    </Grid>
-                ))}
-            </Carousel>
-        </Section>
+        <Carousel showIndicators={false} showThumbs={false} showStatus={false} className={classes.container} emulateTouch={true}>
+            {technologylists.map((technologyList, index) => (
+                <Grid container justify="center" spacing={5} key={index} >
+                    {technologyList.map(technology => (
+                        <Grid item xs={4} sm={3} md={2} key={technology.title} className={classes.imageContainer}>
+                            <img src={technology.image} alt={technology.title} className={classes.logo} />
+                        </Grid>
+                    ))}
+                </Grid>
+            ))}
+        </Carousel>
     );
 
     function getItemsPerSlide(matchesXs, matchesMd, matchesLg) {

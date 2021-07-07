@@ -6,7 +6,7 @@ const OutlinedButton = (props) => {
     const classes = useStyles()
   
     return (
-        <Button className={classes.button} {...props} variant='outlined'>{props.children}</Button>
+        <Button className={props.theme === "primary" ? classes.buttonPrimary : classes.buttonDefault} {...props} variant='outlined'>{props.children}</Button>
     );
 }
 

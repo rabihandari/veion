@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Grid, Typography, Link } from '@material-ui/core'
 import "aos/dist/aos.css";
+import { useHistory } from 'react-router-dom';
 
 import useStyles from './styles';
 import SolidCard from '../shared/Cards/SolidCard/SolidCard';
@@ -34,6 +35,11 @@ const features = [
 
 const VRMS = () => {
     const classes = useStyles();
+    const history = useHistory();
+
+    const goToWhatWeDo = () => {
+        history.push('/what-we-do')
+    }
     
     return(
         <div className={classes.mainContainer}>
@@ -43,7 +49,7 @@ const VRMS = () => {
                 <Grid container spacing={3} className={classes.container}>
                     {features.map((feature, index) => (
                         <Grid item xs={12} sm={6} lg={3} key={feature.title} data-aos="fade-right" data-aos-duration={600} data-aos-delay={(index+1) * 200}>
-                            <SolidCard style={{ cursor: 'pointer' }}>
+                            <SolidCard style={{ cursor: 'pointer' }} onClick={goToWhatWeDo}>
                                 <Grid container direction="column" spacing={2}>
                                     <Grid item>
                                         <img src={feature.image} alt="lock" height="50" className={classes.cardImage}/>

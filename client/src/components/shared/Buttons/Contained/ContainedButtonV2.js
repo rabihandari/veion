@@ -6,7 +6,7 @@ const OutlinedButton = (props) => {
     const classes = useStyles()
   
     return (
-        <Button className={classes.button}  {...props} variant='contained' color="primary">{props.children}</Button>
+        <Button className={classes.buttonV2}  {...props} variant='contained' color="primary">{props.children}</Button>
     );
 }
 

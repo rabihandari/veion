@@ -1,25 +1,41 @@
-import React from 'react'
-import { ThemeProvider } from '@material-ui/core'
+import React, { useState } from 'react'
+import { ThemeProvider, Snackbar } from '@material-ui/core'
 import { darkTheme } from './styles'
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+import MuiAlert from '@material-ui/lab/Alert';
 
+import AppContext from './Context/AppContext';
 import ScrollToTop from './components/shared/ScrollToTop';
 import NavigationBar from './components/NavigationBar/NavigationBar'
 import Home from './pages/Home';
 import WhatWeDo from './pages/WhatWeDo';
+import Careers from './pages/Careers';
+
+function Alert(props) {
+  return <MuiAlert elevation={6} variant="filled" {...props} />;
+}
 
 const App = () => {
+  const [alert, setAlert] = useState({ open: false, message: '', severity: 'success' });
   
   return (
     <Router>
-      <ThemeProvider theme={darkTheme}>
-          <ScrollToTop/>
-          <NavigationBar/>
-          <Switch>
-              <Route exact path="/" render={(props) => <Home {...props}/> }/>
-              <Route exact path="/what-we-do" render={(props) => <WhatWeDo {...props}/> }/>
-          </Switch>
-      </ThemeProvider>
+      <AppContext.Provider value={{ setAlert }}>
+        <ThemeProvider theme={darkTheme}>
+            <ScrollToTop/>
+            <NavigationBar/>
+            <Switch>
+                <Route exact path="/" render={(props) => <Home {...props}/> }/>
+                <Route exact path="/what-we-do" render={(props) => <WhatWeDo {...props}/> }/>
+                <Route exact path="/careers" render={(props) => <Careers {...props}/> }/>
+            </Switch>
+            <Snackbar open={alert.open} anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }} autoHideDuration={5000} onClose={() => setAlert({ ...alert, open: false })}>
+                <Alert onClose={() => setAlert({ ...alert, open: false })} severity={alert.severity}>
+                    {alert.message}
+                </Alert>
+            </Snackbar>
+        </ThemeProvider>
+      </AppContext.Provider>
     </Router>
   );
 }

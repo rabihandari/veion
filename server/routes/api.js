@@ -1,0 +1,10 @@
+import express from 'express';
+
+import { cv_storage } from '../config/storage.js';
+import { applyJob } from '../controllers/index.js'
+
+const router = express.Router();
+
+router.post('/applyJob', cv_storage.single('cv'), applyJob);
+
+export default router;

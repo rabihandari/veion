@@ -20,19 +20,19 @@ const NavigationBar = (props) => {
   const navigtionItems = [
     {
       title: 'Home',
-      sectionId: 'home',
+      action: () => {history.push('/')}
     },
     {
       title: 'Features',
-      sectionId: 'features',
+      action: () => {history.push('/')}
     },
     {
-      title: 'Technologies',
-      sectionId: 'technologies',
+      title: 'Our Services',
+      action: () => {history.push('/what-we-do')}
     },
     {
-      title: 'How It Works',
-      sectionId: 'how-it-works',
+      title: 'Careers',
+      action: () => {history.push('/careers')}
     },
   ]
 
@@ -54,6 +54,7 @@ const NavigationBar = (props) => {
 
   const handleDrawerItemSelected = (item) => () => {
     setDrawerOpen(false);
+    item.action();
   }
 
   const goToHome = () => {
@@ -72,7 +73,7 @@ const NavigationBar = (props) => {
               <Grid item>
                 <Grid container alignItems='center'>
                   {navigtionItems.map(item => (
-                    <NavigationLink key={item.title} action={() => {}}>{item.title}</NavigationLink>
+                    <NavigationLink key={item.title} action={item.action}>{item.title}</NavigationLink>
                   ))}
                   <OutlinedButton className={classes.quoteButton}>Get A Quote</OutlinedButton>
                 </Grid>

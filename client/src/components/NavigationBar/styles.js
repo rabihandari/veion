@@ -3,7 +3,7 @@ import { makeStyles } from '@material-ui/core'
 export default makeStyles((theme) => ({
     mainContainer: {
         position: 'fixed',
-        zIndex: '1',
+        zIndex: '5',
         width: '100%',
         transition: '0.3s'
     },
@@ -33,7 +33,7 @@ export default makeStyles((theme) => ({
         textTransform: 'none',
         fontWeight: '500',
         marginTop: '5px',
-        marginLeft: '5px',
+        marginLeft: '10px',
         '&:hover': {
             border: '1px solid #ffffff73',
         },

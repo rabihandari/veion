@@ -1,19 +1,24 @@
 import express from 'express';
-import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import cors from 'cors';
+import dotenv from 'dotenv';
+
+import apiRoutes from './routes/api.js';
 
 const app = express();
+dotenv.config();
 
 // Configure middlewares
-app.use(cors());
-app.use(bodyParser.json({ limit: "30mb", extended: true }));
-app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
+app.use(cors({ origin: process.env.FRONTEND_HOST || 'http://localhost:3000', credentials: true }));
+app.use(express.json());
+app.use(express.urlencoded({
+  extended: true
+}));
+
 
 // Configure routes
-app.use('/', (req, res) => {
-    res.send('Hello')
-});
+app.use('/api', apiRoutes);
+
 
 // Connect to the database
 const CONNECTION_URL =  process.env.NODE_ENV == "production" ? DATABASE_URL : 'mongodb://localhost:27017/veion';

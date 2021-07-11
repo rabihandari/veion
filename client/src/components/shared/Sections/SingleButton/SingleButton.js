@@ -3,9 +3,9 @@ import { Grid, Container, Typography } from '@material-ui/core'
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
 import useStyles from './styles'
-import OutlinedButton from '../shared/Buttons/Outlined/OutlinedButton';
+import OutlinedButton from '../../Buttons/Outlined/OutlinedButton';
 
-const HowItWorks = (props) => {
+const SingleButton = ({ title, actionTitle, action }) => {
     const classes = useStyles();
 
     return(
@@ -13,10 +13,10 @@ const HowItWorks = (props) => {
             <Container>
                 <Grid container alignItems="center" justify="space-around" spacing={3}>
                     <Grid item>
-                        <Typography variant='h4'>Ready to take your start up to the next level?</Typography>
+                        <Typography variant='h4'>{title}</Typography>
                     </Grid>
                     <Grid item>
-                        <OutlinedButton theme="primary" endIcon={<ArrowForwardIcon/>}>Contact Us</OutlinedButton>
+                        <OutlinedButton theme="primary" endIcon={<ArrowForwardIcon/>} onClick={action}>{actionTitle}</OutlinedButton>
                     </Grid>
                 </Grid>
             </Container>
@@ -24,4 +24,4 @@ const HowItWorks = (props) => {
     )
 }
 
-export default HowItWorks
+export default SingleButton

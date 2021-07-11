@@ -15,7 +15,9 @@ export const darkTheme = createMuiTheme({
       },
       body2: {
         color: '#FFFFFF96'
-      }
+      },
+      
+      
     },
     palette: {
       primary: {
@@ -26,15 +28,29 @@ export const darkTheme = createMuiTheme({
         main: '#000',
         light: '#181818',
         dark: '#121212'
-      }
-      
-      
+      },
     },
+    
     overrides: {
       MuiContainer: {
         maxWidthLg: '1000px',
-        
       },
+      MuiInput: {
+        root: {
+          color: 'white',
+        },
+        underline: {
+          '&:before': {
+            borderBottom: '1px solid rgb(255 255 255 / 42%)'
+          },
+          '&:after': {
+              borderBottom: `2px solid #45b1f5`
+          },
+          '&:hover:not($disabled):not($focused):not($error):before': {
+              borderBottom: `2px solid white`
+          }
+        }
+      }
     }
 });
 

@@ -23,16 +23,16 @@ const NavigationBar = (props) => {
       action: () => {history.push('/')}
     },
     {
-      title: 'Features',
-      action: () => {history.push('/')}
-    },
-    {
       title: 'Our Services',
       action: () => {history.push('/what-we-do')}
     },
     {
       title: 'Careers',
       action: () => {history.push('/careers')}
+    },
+    {
+      title: 'Contact Us',
+      action: () => {history.push('/contact-us')}
     },
   ]
 

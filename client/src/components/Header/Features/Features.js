@@ -55,9 +55,9 @@ const Heading = () => {
                 <Typography variant="body1">Aliquam hendrerit ligula eu lobortis maximus. Praesent elementum rhoncus convallis.</Typography>
             </Grid>
             {features.map((feature, index) => (
-                <Grid item sm={6} md={4} key={feature.title} data-aos="fade-up" data-aos-duration={(index+1) * 300}>
+                <Grid item sm={6} md={4} key={feature.title} data-aos="fade-up" data-aos-duration={(index+1) * 300} >
                     <GradientCard>
-                        <Grid container direction="column" spacing={2}>
+                        <Grid container direction="column" spacing={2} className={classes.cardContainer}>
                             <Grid item>
                                 <img src={feature.image} alt="lock" width="40" className={classes.cardImage}/>
                             </Grid>

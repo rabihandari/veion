@@ -44,3 +44,26 @@ export const sendCV = async (data, cv_path) => {
         ]
     });
 }
+
+export const sendMail = async (name, email, subject, message) => {
+
+    // create reusable transporter object using the default SMTP transport
+    let transporter = nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 587,
+        secure: false,
+        requireTLS: true,
+        auth: {
+            user: process.env.GMAIL_USER, 
+            pass: process.env.GMAIL_PASS, 
+        },
+    });
+
+    // send mail with defined transport object
+    await transporter.sendMail({
+        from: `${name} <${email}>`, // sender address
+        to: process.env.GMAIL_USER, // list of receivers
+        subject: subject, // Subject line
+        html: `<h3><b>Email: </b>${email}</h3>` + '<br/>' + message, // html body
+    });
+}

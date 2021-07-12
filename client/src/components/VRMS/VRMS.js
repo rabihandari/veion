@@ -45,7 +45,7 @@ const VRMS = () => {
                                 </Link>
                             </Grid>
                             <Grid item>
-                                <OutlinedButton style={{ padding: '10px 20px'}}>Learn More</OutlinedButton>
+                                <OutlinedButton endIcon={<ArrowForwardIcon/>} style={{ padding: '10px 20px'}}>Learn More</OutlinedButton>
                             </Grid>
                         </Grid>
                     </Grid>

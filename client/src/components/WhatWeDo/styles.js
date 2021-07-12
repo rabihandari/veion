@@ -13,8 +13,8 @@ export default makeStyles((theme) => ({
         display: 'flex',
         alignItems: 'center'
     },
-    cardTitle: {
-        
+    title: {
+        fontWeight: '700'
     },
     subTitle: {
         padding: '5px 0px'

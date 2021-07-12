@@ -5,7 +5,7 @@ export default makeStyles((theme) => ({
         padding: '100px 0px',
         backgroundColor: theme.palette.secondary.dark,
         [theme.breakpoints.down('xs')]: {
-            padding: '80px 0px',
+            padding: '40px 0px',
         }
     },
     title: {

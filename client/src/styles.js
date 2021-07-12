@@ -49,8 +49,39 @@ export const darkTheme = createMuiTheme({
           '&:hover:not($disabled):not($focused):not($error):before': {
               borderBottom: `2px solid white`
           }
-        }
+        },
+      },
+      // MuiInputBase: {
+      //   input: {
+      //     '&:-webkit-autofill': {
+      //       backgroundColor: 'transparent!important'
+      //     },
+      //   },
+      // },
+      MuiOutlinedInput: {
+        root: {
+          color: 'white',
+          
+        },
+        notchedOutline: {
+          borderColor: 'rgb(255 255 255 / 15%)'
+        },
+      },
+      MuiTextField: {
+        root: {
+          "& .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+            borderColor: "rgb(255 255 255 / 15%)"
+          },
+          "&:hover .MuiOutlinedInput-root .MuiOutlinedInput-notchedOutline": {
+            borderColor: "white"
+          },
+          "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline": {
+            borderColor: "#45b1f5"
+          }
+        },
+        
       }
+      
     }
 });
 
@@ -74,7 +105,7 @@ export const lightTheme = createMuiTheme({
     palette: {
       primary: {
         main: '#45b1f5',
-        dark: '#0075bf'
+        dark: '#0075bf',
       },
       
     },
@@ -83,6 +114,16 @@ export const lightTheme = createMuiTheme({
         maxWidthLg: '1000px',
         
       },
+      MuiInputBase: {
+        root: {
+          fontSize: '14px'
+        },
+      },
+      MuiInputLabel: {
+        root: {
+          fontSize: '14px'
+        }
+      }
     }
 });
 

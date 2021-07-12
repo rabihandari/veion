@@ -5,3 +5,4 @@ const API = axios.create({ baseURL: process.env.REACT_APP_ENV === "production" ?
 
 
 export const applyJob = (formData) => API.post('/api/applyJob', formData);
+export const sendMail = (formData) => API.post('/api/sendMail', formData);

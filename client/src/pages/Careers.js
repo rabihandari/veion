@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { useHistory } from 'react-router-dom';
 import AOS from 'aos';
 import "aos/dist/aos.css";
 
@@ -10,6 +11,7 @@ import CareerOpportunities from '../components/CareerOpportunities/CareerOpportu
 import SingleButton from '../components/shared/Sections/SingleButton/SingleButton';
 
 const Careers = () => {
+    const history = useHistory();
     
     useEffect(() => {
         AOS.init({
@@ -24,7 +26,7 @@ const Careers = () => {
             <CareersIntroduction />
             <CareerBenefits />
             <CareerOpportunities />
-            <SingleButton title="Interested in finding out more? Get in touch" actionTitle="Contact Us" action={() => {}}/>
+            <SingleButton title="Interested in finding out more? Get in touch" actionTitle="Contact Us" action={() => { history.push('/contact-us') }}/>
             <FooterV2 />
         </>
     );

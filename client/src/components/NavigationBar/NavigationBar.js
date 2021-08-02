@@ -34,6 +34,10 @@ const NavigationBar = (props) => {
       title: 'Contact Us',
       action: () => {history.push('/contact-us')}
     },
+    {
+      title: 'About Us',
+      action: () => {history.push('/about-us')}
+    },
   ]
 
   useEffect(() => {

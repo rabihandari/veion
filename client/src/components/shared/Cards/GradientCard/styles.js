@@ -10,5 +10,6 @@ export default makeStyles((theme) => ({
         "&:hover": {
             backgroundImage: 'linear-gradient(180deg, #1c262b 0%, #1c262b66 100%)',
         },
+        cursor: 'pointer'
     },
 }))

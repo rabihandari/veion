@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react'
+import { useHistory } from 'react-router-dom';
 import { Typography, Grid, Link } from '@material-ui/core'
 import AOS from 'aos';
 import "aos/dist/aos.css";
@@ -39,7 +40,8 @@ const features = [
 ]
 
 const Heading = () => {
-    const classes = useStyles()
+    const classes = useStyles();
+    const history = useHistory();
 
     useEffect(() => {
         AOS.init({
@@ -55,7 +57,7 @@ const Heading = () => {
                 <Typography variant="body1">Aliquam hendrerit ligula eu lobortis maximus. Praesent elementum rhoncus convallis.</Typography>
             </Grid>
             {features.map((feature, index) => (
-                <Grid item sm={6} md={4} key={feature.title} data-aos="fade-up" data-aos-duration={(index+1) * 300} >
+                <Grid item sm={6} md={4} key={feature.title} data-aos="fade-up" data-aos-duration={(index+1) * 300} onClick={ () => {history.push('/about-us')}}>
                     <GradientCard>
                         <Grid container direction="column" spacing={2} className={classes.cardContainer}>
                             <Grid item>

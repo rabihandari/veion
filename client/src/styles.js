@@ -51,13 +51,6 @@ export const darkTheme = createMuiTheme({
           }
         },
       },
-      // MuiInputBase: {
-      //   input: {
-      //     '&:-webkit-autofill': {
-      //       backgroundColor: 'transparent!important'
-      //     },
-      //   },
-      // },
       MuiOutlinedInput: {
         root: {
           color: 'white',

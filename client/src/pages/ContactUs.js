@@ -4,9 +4,9 @@ import "aos/dist/aos.css";
 
 import HeaderV2 from '../components/HeaderV2/HeaderV2'
 import FooterV2 from '../components/FooterV2/FooterV2';
-import ContactUs from '../components/ContactUs/ContactUs';
+import ContactUsSection from '../components/ContactUs/ContactUs';
 
-const Careers = () => {
+const ContactUs = () => {
     
     useEffect(() => {
         AOS.init({
@@ -18,10 +18,10 @@ const Careers = () => {
     return(
         <>
             <HeaderV2 title="Contact Us"/>
-            <ContactUs />
+            <ContactUsSection />
             <FooterV2 />
         </>
     );
 }
 
-export default Careers;
+export default ContactUs;

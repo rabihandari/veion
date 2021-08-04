@@ -17,7 +17,7 @@ const VRMS = () => {
     return(
         <div className={classes.mainContainer}>
             <Container className={classes.container}>
-                <Grid container alignItems="center">
+                <Grid container alignItems="center"  style={{ overflowX: 'hidden' }}>
                     <Grid item xs={12}>
                         <Container data-aos="fade-right">
                             <Typography variant="h3" className={classes.title}>Our Restaurants Solution</Typography>

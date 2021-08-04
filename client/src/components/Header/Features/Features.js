@@ -1,39 +1,38 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { useHistory } from 'react-router-dom';
 import { Typography, Grid, Link } from '@material-ui/core'
-import AOS from 'aos';
-import "aos/dist/aos.css";
 
 import useStyles from './styles'
 import GradientCard from '../../shared/Cards/GradientCard/GradientCard'
 import LockIcon from '../../../images/ic_lock.svg'
 import TrustIcon from '../../../images/ic_trust.svg'
 import ScalableIcon from '../../../images/ic_scalable.svg'
+import UserExpIcon from '../../../images/ic_userexp.svg'
 
 const features = [
     {
         image: LockIcon,
         title: 'Complete Security',
-        body: 'Nam nisl lectus, porttitor vel aliquam sit amet, commodo ut nisl. Duis in lectus ac nibh molestie.',
+        body: 'We make sure to keep your endpoints secure from any security leaks and ensure zero‑day threats',
     },
     {
         image: TrustIcon,
         title: 'Proven Trustworthy',
-        body: 'Nam nisl lectus, porttitor vel aliquam sit amet, commodo ut nisl. Duis in lectus ac nibh molestie.',
+        body: 'Trust is our priority. We believe that a business will thrive, flourish and succeed only by building trust',
     },
     {
         image: ScalableIcon,
-        title: 'Endlessly Scalable',
-        body: 'Nam nisl lectus, porttitor vel aliquam sit amet, commodo ut nisl. Duis in lectus ac nibh molestie.',
+        title: 'Endless Scalability',
+        body: 'Going from small to big has never been an issue. Our scalability soolutions always filts your business needs ',
+    },
+    {
+        image: UserExpIcon,
+        title: 'User Experience',
+        body: 'We set clarity and creativity in our designs, creating for users an engjoyable experience',
     },
     {
         image: LockIcon,
-        title: 'Complete Security4',
-        body: 'Nam nisl lectus, porttitor vel aliquam sit amet, commodo ut nisl. Duis in lectus ac nibh molestie.',
-    },
-    {
-        image: LockIcon,
-        title: 'Complete Security5',
+        title: 'Quality Assurance',
         body: 'Nam nisl lectus, porttitor vel aliquam sit amet, commodo ut nisl. Duis in lectus ac nibh molestie.',
     },
 
@@ -42,19 +41,12 @@ const features = [
 const Heading = () => {
     const classes = useStyles();
     const history = useHistory();
-
-    useEffect(() => {
-        AOS.init({
-            duration : 1000,
-            once: true
-        });
-    }, [])
   
     return (
         <Grid container spacing={5} className={classes.container} justify="center">
             <Grid item sm={6} md={4}>
                 <Typography variant="h4" className={classes.title}>Powerful Features</Typography>
-                <Typography variant="body1">Aliquam hendrerit ligula eu lobortis maximus. Praesent elementum rhoncus convallis.</Typography>
+                <Typography variant="body1">Veion offers our customers a wealth of technical and business expertise along side with powerful features</Typography>
             </Grid>
             {features.map((feature, index) => (
                 <Grid item sm={6} md={4} key={feature.title} data-aos="fade-up" data-aos-duration={(index+1) * 300} onClick={ () => {history.push('/about-us')}}>

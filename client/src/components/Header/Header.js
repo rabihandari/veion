@@ -44,7 +44,7 @@ const HeaderParticles = () => {
             params={{
                 particles: {
                     number: {
-                        value: matches ? 20 : 50
+                        value: matches ? 15 : 50
                     },
                     size: {
                         value: 3

@@ -23,9 +23,8 @@ const App = () => {
   
   return (
     <Router>
-      <AppContext.Provider value={{ setAlert }}>
+      <AppContext.Provider value={{ setAlert }} >
         <ThemeProvider theme={darkTheme}>
-
             <ScrollToTop/>
             <NavigationBar/>
             <Switch>

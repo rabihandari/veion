@@ -1,7 +1,6 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import { Typography, Grid } from '@material-ui/core'
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
-import AOS from 'aos';
 import "aos/dist/aos.css";
 import { useHistory } from 'react-router-dom';
 
@@ -15,15 +14,11 @@ const Heading = ({ featuresRef }) => {
     const history = useHistory();
 
     const scrollToFeatures = () => {
-        featuresRef.current.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+        window.scrollTo({
+            top: featuresRef.current.offsetTop - 80,
+            behavior: "smooth" 
+          });
     }
-
-    useEffect(() => {
-        AOS.init({
-            duration : 1000,
-            once: true
-        });
-    }, [])
 
     
   const goToQuote = () => {

@@ -101,11 +101,16 @@ const NavigationBar = (props) => {
           <div className={classes.listContainer}>
             <div className={classes.logoContainer}>
               <img src={Logo} alt="Logo" height="30"/>
+              <div className={classes.appNameConatiner}>
+                <Typography variant="h5" className={classes.appName}>Veion</Typography>
+                <Typography variant="body2" className={classes.copyright}>copyright @2021</Typography>
+              </div>
             </div>
-            <List>
+            <Divider className={classes.divider}/>
+            <List style={{ padding: '20px 0px' }}>
               {navigtionItems.map((item, index) => (
                 <ListItem button key={item.title} className={classes.listItem} onClick={handleDrawerItemSelected(item)}>
-                  <ListItemText primary={item.title} style={{ textAlign: 'center' }} />
+                  <ListItemText primary={item.title} />
                 </ListItem>
               ))}
             </List>

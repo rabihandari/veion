@@ -13,7 +13,7 @@ const FooterV2 = () => {
     
     return(
         <div className={classes.mainContainer}>
-            <Container className={classes.container}>
+            <Container className={classes.container} >
                 <Grid container alignItems="baseline" justify='space-between'>
                     <Grid item xs={12} md={4} className={classes.sectionContainer}>
                         <Typography className={classes.sectionTitle}>About Us</Typography>

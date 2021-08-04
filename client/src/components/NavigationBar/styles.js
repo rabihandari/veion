@@ -49,8 +49,24 @@ export default makeStyles((theme) => ({
         padding: '10px 20px'
     },
     logoContainer: {
+        display: 'flex',
         padding: '20px 20px',
         marginTop: '20px',
-        textAlign: 'center' ,
-    }
+        textAlign: 'center',
+        alignItems: 'center'
+    },
+    appNameConatiner: {
+        marginLeft: '10px',
+        textAlign: 'start'
+    },
+    appName: {
+        color: 'white',
+        fontWeight: '700'
+    },
+    copyright: {
+        fontSize: '10px'
+    },
+    divider: {
+        backgroundColor: '#ffffff1c',
+    },
 }))

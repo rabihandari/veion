@@ -65,6 +65,10 @@ const NavigationBar = (props) => {
     history.push('/')
   }
 
+  const goToQuote = () => {
+    history.push('/get-quote')
+  }
+
   return (
     <>
       <div className={classes.mainContainer} style={ scrollPosition > 150 ? { backgroundColor: 'rgb(255 255 255 / 12%)', backdropFilter: 'saturate(60%) blur(5px)' } : { backgroundColor: 'transparent' } }>
@@ -79,7 +83,7 @@ const NavigationBar = (props) => {
                   {navigtionItems.map(item => (
                     <NavigationLink key={item.title} action={item.action}>{item.title}</NavigationLink>
                   ))}
-                  <OutlinedButton className={classes.quoteButton}>Get A Quote</OutlinedButton>
+                  <OutlinedButton className={classes.quoteButton} onClick={goToQuote}>Get A Quote</OutlinedButton>
                 </Grid>
               </Grid>
             :

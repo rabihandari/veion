@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import { Container, useTheme, useMediaQuery } from '@material-ui/core'
 import Particles from 'react-particles-js';
 
@@ -9,6 +9,7 @@ import Technologies from './Technologies/Technologies'
 
 const Header = () => {
     const classes = useStyles()
+    const featuresRef = useRef(null);
   
     return (
         <div className={classes.mainContainer}>
@@ -16,10 +17,10 @@ const Header = () => {
             <div className={classes.headingContainer}>
                 <HeaderParticles />
                 <Container>
-                    <Heading />
+                    <Heading featuresRef={featuresRef} />
                 </Container>
             </div>
-            <div className={classes.featuresContainer}>
+            <div className={classes.featuresContainer} ref={featuresRef}>
                 <Container>
                     <Features/>
                 </Container>

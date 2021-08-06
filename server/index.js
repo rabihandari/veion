@@ -21,7 +21,7 @@ app.use('/api', apiRoutes);
 
 
 // Connect to the database
-const CONNECTION_URL =  process.env.NODE_ENV == "production" ? DATABASE_URL : 'mongodb://localhost:27017/veion';
+const CONNECTION_URL =  process.env.NODE_ENV == "production" ? process.env.DATABASE_URL : 'mongodb://localhost:27017/veion';
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(CONNECTION_URL, { useNewUrlParser: true, useUnifiedTopology: true })

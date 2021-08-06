@@ -1,0 +1,28 @@
+version: '3.7'
+
+services:
+    veion_server: 
+        container_name: veion_server
+        build: ./server
+        ports:
+            - 5001:5001
+        env_file:
+            - ./server/.env
+        environment:
+            - NODE_ENV=production
+        networks:
+            - server_load_balancer
+    veion_client:
+        container_name: veion_client
+        build: ./client
+        env_file:
+            - ./client/.env
+        networks:
+            - server_load_balancer
+        external_links:
+            - main_server
+                
+
+networks:
+    server_load_balancer:
+        external: true

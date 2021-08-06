@@ -1,0 +1,17 @@
+html {
+    scroll-behavior: smooth; 
+    overflow-x: hidden;
+}
+
+body {
+    background-color: black;
+    margin: 0px;
+}
+
+*{
+    -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+

@@ -24,7 +24,7 @@ const Home = () => {
             <HowItWorks/>
             <WhatWeDo />
             <VRMS />
-             <Footer />
+            <Footer />
         </>
     );
 }

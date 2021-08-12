@@ -8,6 +8,7 @@ import LockIcon from '../../../images/ic_lock.svg'
 import TrustIcon from '../../../images/ic_trust.svg'
 import ScalableIcon from '../../../images/ic_scalable.svg'
 import UserExpIcon from '../../../images/ic_userexp.svg'
+import QualityAssuranceIcon from '../../../images/ic_qualityassurance.svg'
 
 const features = [
     {
@@ -23,7 +24,7 @@ const features = [
     {
         image: ScalableIcon,
         title: 'Endless Scalability',
-        body: 'Going from small to big has never been an issue. Our scalability soolutions always filts your business needs ',
+        body: 'We apply the best practices to build rock-solid architectures with strong business logic to ensure uninterrupted performance',
     },
     {
         image: UserExpIcon,
@@ -31,9 +32,9 @@ const features = [
         body: 'We set clarity and creativity in our designs, creating for users an engjoyable experience',
     },
     {
-        image: LockIcon,
+        image: QualityAssuranceIcon,
         title: 'Quality Assurance',
-        body: 'Nam nisl lectus, porttitor vel aliquam sit amet, commodo ut nisl. Duis in lectus ac nibh molestie.',
+        body: 'We perform a full QA and Testing activity cycle to provide maximum depth and coverage insuring the best quality',
     },
 
 ]
@@ -49,7 +50,8 @@ const Heading = () => {
                 <Typography variant="body1">Veion offers our customers a wealth of technical and business expertise along side with powerful features</Typography>
             </Grid>
             {features.map((feature, index) => (
-                <Grid item sm={6} md={4} key={feature.title} data-aos="fade-up" data-aos-duration={(index+1) * 300} onClick={ () => {history.push('/about-us')}}>
+                // <Grid item sm={6} md={4} key={feature.title} data-aos="fade-up" data-aos-duration={(index+1) * 300} onClick={ () => {history.push('/about-us')}}>
+                <Grid item sm={6} md={4} key={feature.title} onClick={ () => {history.push('/about-us')}}>
                     <GradientCard>
                         <Grid container direction="column" spacing={2} className={classes.cardContainer}>
                             <Grid item>

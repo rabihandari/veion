@@ -11,7 +11,10 @@ export default makeStyles((theme) => ({
     container: {
     },
     title: {
-        fontWeight: '700'
+        fontWeight: '700',
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '34px'
+        },
     },
     cardTitleContainer: {
         minHeight: '64px',

@@ -9,7 +9,10 @@ export default makeStyles((theme) => ({
         }
     },
     title: {
-        fontWeight: '700'
+        fontWeight: '700',
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '34px'
+        },
     },
     opportunitiesContainer: {
         padding: '30px 0px'

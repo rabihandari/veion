@@ -11,17 +11,17 @@ const benefits = [
     {
         image: ScheduleIcon,
         title: 'Flexible Schedule',
-        body: 'Nam nisl lectus, porttitor vel aliquam sit amet, commodo ut nisl. Duis in lectus ac nibh molestie.',
+        body: 'Veion provides the option to work remotely, work wherever and whenever you feel comfortable',
     },
     {
         image: SalartIcon,
         title: 'Competative Salary',
-        body: 'Nam nisl lectus, porttitor vel aliquam sit amet, commodo ut nisl. Duis in lectus ac nibh molestie.',
+        body: 'When employees are satisfied with their salaries, they will enjoy their journey producing the best work',
     },
     {
         image: OpportunityIcon,
         title: 'Great Opportunities',
-        body: 'Nam nisl lectus, porttitor vel aliquam sit amet, commodo ut nisl. Duis in lectus ac nibh molestie.',
+        body: 'Never stop at the position you\'re in. At Veion every one gets the best opportunity in his field',
     },
 ];
 
@@ -34,7 +34,8 @@ const CareerBenefits = () => {
                 <Typography variant="h3" className={classes.title}>Our Benefits</Typography>
                 <Grid container justify="space-around" className={classes.cardsContainer} spacing={3}>
                     {benefits.map((benefit, index) => (
-                        <Grid item xs={12} sm={6} lg={4} key={benefit.title} data-aos="fade-right" data-aos-duration={600} data-aos-delay={(index+1) * 200}>
+                        // <Grid item xs={12} sm={6} lg={4} key={benefit.title} data-aos="fade-right" data-aos-duration={600} data-aos-delay={(index+1) * 200}>
+                        <Grid item xs={12} sm={6} lg={4} key={benefit.title}>
                             <SolidCard style={{ height: 'auto' }}>
                                 <Grid container direction="column" spacing={1}>
                                     <Grid item>

@@ -20,6 +20,10 @@ const jobs = [
         description: 'Needed an experienced IOS developer'
     },
     {
+        title: 'Android Developer',
+        description: 'Needed an experienced Android Studio developer'
+    },
+    {
         title: 'UI/UX Designer',
         description: 'Needed an experienced UI/UX designer'
     },

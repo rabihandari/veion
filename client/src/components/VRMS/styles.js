@@ -18,6 +18,9 @@ export default makeStyles((theme) => ({
     },
     title: {
         fontWeight: '700',
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '34px'
+        },
     },
     subTitle: {
         padding: '5px 0px'

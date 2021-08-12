@@ -19,7 +19,10 @@ export default makeStyles((theme) => ({
     infoItemText: {
         fontSize: '22px',
         color: 'white',
-        fontFamily: 'system-ui'
+        fontFamily: 'system-ui',
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '18px'
+        },
     },
     icon: {
         color: theme.palette.primary.dark,
@@ -49,6 +52,9 @@ export default makeStyles((theme) => ({
         fontWeight: '700',
         fontFamily: 'system-ui',
         marginBottom: '10px',
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '32px'
+        },
     },
     input: {
         marginBottom: '20px'

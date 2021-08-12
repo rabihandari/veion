@@ -38,7 +38,7 @@ const WeProvide = () => {
                         <Typography variant="h3" className={classes.title}>What we do? We provide</Typography>
                     </Grid>
                     <Grid item xs={12} md={7}>
-                        <Typography className={classes.desc}>We collaboratively administrate empowered markets through existing channels and new opportunities on the horizon. We can quickly maximize the timely deliverables for real-time presentations to deliver outstanding ROI.</Typography>
+                        <Typography className={classes.desc}>We provide teams capable of increasing the velocity of your development and extending your technical capabilities. We take care of every aspect of developing your product, enabling you to focus on the growth, impact, and scaling of your organization</Typography>
                     </Grid>
                     <Grid item xs={12} className={classes.valuesContainer}>
                         <Grid container justify="space-around" alignItems="center">

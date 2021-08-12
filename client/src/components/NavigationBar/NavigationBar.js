@@ -1,11 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Container, Typography, Grid, Divider, IconButton, SwipeableDrawer, useMediaQuery, List, ListItem, ListItemText } from '@material-ui/core';
+import { Container, Typography, Grid, Divider, IconButton, SwipeableDrawer, useMediaQuery, List, ListItem, ListItemText, Button } from '@material-ui/core';
 import { useTheme } from '@material-ui/core/styles'
 import MenuIcon from '@material-ui/icons/Menu';
 import { useHistory } from 'react-router-dom';
 
 import useStyles from './styles'
-import OutlinedButton from '../shared/Buttons/Outlined/OutlinedButton';
 import Logo from '../../images/logo-white.png';
 
 
@@ -66,7 +65,8 @@ const NavigationBar = (props) => {
   }
 
   const goToQuote = () => {
-    history.push('/get-quote')
+    history.push('/get-quote');
+    setDrawerOpen(false);
   }
 
   return (
@@ -83,7 +83,7 @@ const NavigationBar = (props) => {
                   {navigtionItems.map(item => (
                     <NavigationLink key={item.title} action={item.action}>{item.title}</NavigationLink>
                   ))}
-                  <OutlinedButton className={classes.quoteButton} onClick={goToQuote}>Get A Quote</OutlinedButton>
+                  <Button className={classes.quoteButton} onClick={goToQuote} theme="primary">Get A Quote</Button>
                 </Grid>
               </Grid>
             :
@@ -107,13 +107,22 @@ const NavigationBar = (props) => {
               </div>
             </div>
             <Divider className={classes.divider}/>
-            <List style={{ padding: '20px 0px' }}>
+            <List style={{ padding: '10px 0px' }}>
               {navigtionItems.map((item, index) => (
-                <ListItem button key={item.title} className={classes.listItem} onClick={handleDrawerItemSelected(item)}>
-                  <ListItemText primary={item.title} />
+                <ListItem button key={item.title} className={classes.listItem} onClick={handleDrawerItemSelected(item)} >
+                  <ListItemText primary={item.title} classes={{primary: classes.listItemText}}/>
                 </ListItem>
               ))}
             </List>
+            
+            <Divider className={classes.divider}/>
+            <div style={{ padding: '5px 0px' }}>
+                <ListItem button className={classes.listItem} onClick={goToQuote}>
+                  <ListItemText primary="Get A Quote" classes={{primary:classes.listItemText}}/>
+                </ListItem>
+            </div>
+            <Divider className={classes.divider}/>
+            
           </div>
         </SwipeableDrawer>
       </React.Fragment>

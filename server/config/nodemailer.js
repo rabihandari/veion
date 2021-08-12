@@ -97,7 +97,7 @@ export const sendQuote = async (data, quote_path=null) => {
     };
     const htmlToSend = template(replacements);
 
-    // send mail with defined transport object
+    // send mail with defined transport object...
     if (quote_path){
         await transporter.sendMail({
             from: `Veion Support <${process.env.GMAIL_USER}>`,

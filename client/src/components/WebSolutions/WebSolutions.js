@@ -13,7 +13,7 @@ const solutions = [
     {
         image: SecurityIcon,
         title: 'Unparalleled data security',
-        body: 'We have a proven experience working with important regulations and standards in Healthcare, Fintech, Voice, and other data-sensitive domains: HIPAA, GDPR, OWASP etc',
+        body: 'We have a proven experience working with important regulations and standards. We make sure to keep your endpoints secure from any security leaks and ensure zero‑day threats',
     },
     {
         image: UserExpIcon,
@@ -36,7 +36,7 @@ const WebSolutions = () => {
                 <Typography variant="h3" className={classes.title}>Our Web Solutions</Typography>
                 <Grid container justify="space-around" className={classes.cardsContainer} spacing={3}>
                     {solutions.map((solution, index) => (
-                        <Grid item xs={12} sm={6} lg={4} key={solution.title} data-aos="fade-right" data-aos-duration={600} data-aos-delay={(index+1) * 200}>
+                        <Grid item xs={12} sm={6} lg={4} key={solution.title}>
                             <SolidCard borderless="true" style={{ height: 'auto' }}>
                                 <Grid container direction="column" spacing={1}>
                                     <Grid item>

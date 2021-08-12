@@ -9,7 +9,7 @@ export default makeStyles((theme) => ({
         position: 'relative',
         backgroundColor: '#181818;',
         [theme.breakpoints.down('xs')]: {
-            minHeight: '250px',
+            minHeight: '150px',
             padding: '60px 20px 20px 20px',
         }
     },
@@ -25,6 +25,9 @@ export default makeStyles((theme) => ({
         width: '100%'
     },
     title: {
-        fontWeight: '700'
+        fontWeight: '700',
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '42px'
+        },
     },
 }))

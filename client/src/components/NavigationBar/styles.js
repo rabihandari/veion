@@ -10,7 +10,7 @@ export default makeStyles((theme) => ({
     container: {
         padding: '20px 20px',
         [theme.breakpoints.down('xs')]: {
-            padding: '10px 20px',
+            padding: '7px 20px',
         }
     },
     navLink: {
@@ -42,7 +42,7 @@ export default makeStyles((theme) => ({
         width: '75%'
     },
     listContainer: {
-        backgroundColor: '#212121',
+        backgroundColor: '#161616',
         height: '100%',
     },
     listItem: {
@@ -50,8 +50,7 @@ export default makeStyles((theme) => ({
     },
     logoContainer: {
         display: 'flex',
-        padding: '20px 20px',
-        marginTop: '20px',
+        padding: '30px 20px',
         textAlign: 'center',
         alignItems: 'center'
     },
@@ -69,4 +68,7 @@ export default makeStyles((theme) => ({
     divider: {
         backgroundColor: '#ffffff1c',
     },
+    listItemText: {
+        fontSize: '14px'
+    }
 }))

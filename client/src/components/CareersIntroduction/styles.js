@@ -9,14 +9,17 @@ export default makeStyles((theme) => ({
         }
     },
     title: {
-        fontWeight: '700'
+        fontWeight: '700',
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '28px'
+        },
     },
     desc: {
         fontSize: '20px',
         color: 'white',
         padding: '20px 0px',
         [theme.breakpoints.down('xs')]: {
-            fontSize: '18px',
+            fontSize: '16px',
         }
     },
     imageContainer: {

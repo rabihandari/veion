@@ -43,6 +43,10 @@ export default makeStyles((theme) => ({
         fontWeight: '700',
         fontFamily: 'system-ui',
         marginBottom: '10px',
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '28px',
+            fontWeight: '500',
+        },
     },
     input: {
         marginBottom: '20px'

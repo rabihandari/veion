@@ -1,7 +1,5 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
-import AOS from 'aos';
-import "aos/dist/aos.css";
 
 import HeaderV2 from '../components/HeaderV2/HeaderV2'
 import FooterV2 from '../components/FooterV2/FooterV2';
@@ -13,12 +11,6 @@ import SingleButton from '../components/shared/Sections/SingleButton/SingleButto
 const AboutUs = () => {
     const history = useHistory();
     
-    useEffect(() => {
-        AOS.init({
-            duration : 1000,
-            once: true
-        });
-    }, [])
     
     return(
         <>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Grid, Typography, Link } from '@material-ui/core'
-import "aos/dist/aos.css";
 import { useHistory } from 'react-router-dom';
 
 import useStyles from './styles';
@@ -14,22 +13,22 @@ const features = [
     {
         image: AndroidIcon,
         title: 'Android Development',
-        body: 'Nam nisl lectus, porttitor vel aliquam sit amet, commodo ut nisl. Duis in lectus ac nibh molestie.',
+        body: 'Android mobile development is the cornerstone of any modern business. Veion has extensive experience creating...',
     },
     {
         image: IOSIcon,
         title: 'IOS Development',
-        body: 'Nam nisl lectus, porttitor vel aliquam sit amet, commodo ut nisl. Duis in lectus ac nibh molestie.',
+        body: 'Our highly accomplished and professionally trained iOS developers make sure we deliver crisp, top-notch...',
     },
     {
         image: WebistesIcon,
         title: 'Website Development',
-        body: 'Nam nisl lectus, porttitor vel aliquam sit amet, commodo ut nisl. Duis in lectus ac nibh molestie.',
+        body: 'Build your business idea website that easily expresses what you do. Combining our skilled engineers...',
     },
     {
         image: CustomIcon,
         title: 'Custom Development',
-        body: 'Nam nisl lectus, porttitor vel aliquam sit amet, commodo ut nisl. Duis in lectus ac nibh molestie.',
+        body: 'We listen to your ideas and create custom software solutions from the ground up, designed especially for...',
     },
 ];
 
@@ -48,7 +47,8 @@ const VRMS = () => {
                 <Typography variant="body1" className={classes.subTitle}>We listen to your ideas and create software solutions from the ground up, designed especially for your business</Typography>
                 <Grid container spacing={3} className={classes.container}>
                     {features.map((feature, index) => (
-                        <Grid item xs={12} sm={6} lg={3} key={feature.title} data-aos="fade-right" data-aos-duration={600} data-aos-delay={(index+1) * 200}>
+                        // <Grid item xs={12} sm={6} lg={3} key={feature.title} data-aos="fade-right" data-aos-duration={600} data-aos-delay={(index+1) * 200}>
+                        <Grid item xs={12} sm={6} lg={3} key={feature.title}>
                             <SolidCard style={{ cursor: 'pointer' }} onClick={goToWhatWeDo}>
                                 <Grid container direction="column" spacing={2}>
                                     <Grid item>

@@ -1,6 +1,5 @@
 import React from 'react';
 import { Container, Grid, Typography, Link } from '@material-ui/core'
-import "aos/dist/aos.css";
 import DoneIcon from '@material-ui/icons/Done';
 import ArrowForwardIcon from '@material-ui/icons/ArrowForward';
 
@@ -19,17 +18,17 @@ const VRMS = () => {
             <Container className={classes.container}>
                 <Grid container alignItems="center"  style={{ overflowX: 'hidden' }}>
                     <Grid item xs={12}>
-                        <Container data-aos="fade-right">
+                        <Container>
                             <Typography variant="h3" className={classes.title}>Our Restaurants Solution</Typography>
                             <Typography variant="body1" className={classes.subTitle}>We leverage the best restaurant management solution to grow your venture, scale your impact, and propel your mission forward</Typography>
                         </Container>
                     </Grid>
-                    <Grid item md={7} data-aos="fade-right">
+                    <Grid item md={7}>
                         <img src={vrmsImage} alt="VRMS" style={{ maxWidth: '100%', padding: '20px 0px' }}/>
                     </Grid>
-                    <Grid item md={4} data-aos="fade-left">
-                        <Typography variant="h5">VRMS</Typography>
-                        <Typography variant="body1" className={classes.desc}>Syberry provides turn-key software development services that add value to your business. Contact us today and transform your ideas into solutions! Syberry provides turn-key software development services that add value to your business. Contact us today and transform your ideas into solutions!</Typography>
+                    <Grid item md={4}>
+                        <Typography variant="h5">Orderzz</Typography>
+                        <Typography variant="body1" className={classes.desc}>Veion provides a turn-key software development service that adds value to your business. Contact us today to start your own e-commerse ordering platform within 7 days only! Orderzz will fulfill all your needs and get you online with the best budget plan in the market</Typography>
                         <Grid container className={classes.featuresContainer} spacing={3}>
                             {features.map((feature, index) => (
                                 <Grid item style={{ display: 'flex' }} xs={6} key={index}>
@@ -40,7 +39,7 @@ const VRMS = () => {
                         </Grid>
                         <Grid container alignItems="center" spacing={2}>
                             <Grid item>
-                                <Link style={{ textDecoration: 'none' }} href="http://chickenonfire.ddns.net/" target="_blank">
+                                <Link style={{ textDecoration: 'none' }} href="https://chickenonfire.orderzz.com/" target="_blank">
                                 <ContainedButton endIcon={<ArrowForwardIcon/>} style={{ padding: '10px 20px'}}>View Demo</ContainedButton>
                                 </Link>
                             </Grid>

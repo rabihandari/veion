@@ -22,7 +22,7 @@ export default makeStyles((theme) => ({
     sectionTitle: {
         color: 'white',
         padding: '0px 10px',
-        fontSize: '18px'
+        fontSize: '18px',
     },
     divider: {
         backgroundColor: '#2d2d2d',

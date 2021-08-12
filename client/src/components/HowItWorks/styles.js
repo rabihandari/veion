@@ -9,7 +9,10 @@ export default makeStyles((theme) => ({
     },
     title: {
         textAlign: 'center',
-        fontWeight: '700'
+        fontWeight: '700',
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '34px'
+        },
     },
     subtitle: {
         textAlign: 'center',

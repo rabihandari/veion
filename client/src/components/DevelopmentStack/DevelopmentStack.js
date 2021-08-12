@@ -39,7 +39,7 @@ const stack = [
     },
     {
         image: VirtualIcon,
-        title: 'Virtualization/Container system',
+        title: 'Virtualization / Container system',
         body: 'Docker, Docker Swarm, Kubernetes, Ansible',
     },
 ]

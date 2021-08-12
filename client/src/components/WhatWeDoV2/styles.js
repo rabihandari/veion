@@ -7,12 +7,20 @@ export default makeStyles((theme) => ({
     },
     title: {
         fontWeight: '700',
-        padding: '20px 0px'
+        padding: '20px 0px',
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '34px'
+        },
     },
     image: {
         backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat',
-        width: '100%',
+        height: '256px',
+        width: '384px',
+        [theme.breakpoints.down('md')]: {
+            height: 'auto',
+            width: '100%',
+        },
     },
     itemsContainer: {
         padding: '40px 0px'

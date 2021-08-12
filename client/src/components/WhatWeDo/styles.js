@@ -14,7 +14,10 @@ export default makeStyles((theme) => ({
         alignItems: 'center'
     },
     title: {
-        fontWeight: '700'
+        fontWeight: '700',
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '34px'
+        },
     },
     subTitle: {
         padding: '5px 0px'

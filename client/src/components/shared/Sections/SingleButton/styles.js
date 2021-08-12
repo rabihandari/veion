@@ -7,6 +7,11 @@ export default makeStyles((theme) => ({
         [theme.breakpoints.down('xs')]: {
             padding: '60px 0px',
         }
-
     },
+    title: {
+        [theme.breakpoints.down('xs')]: {
+            fontSize: '24px',
+            textAlign: 'center'
+        },
+    }
 }))

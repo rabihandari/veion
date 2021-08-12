@@ -2,23 +2,22 @@ version: '3.7'
 
 services:
     veion_server: 
-        container_name: veion_server
-        build: ./server
+        image: repo.treescale.com/veionteam/veion-server:1.0
         env_file:
             - ./server/.env
         environment:
             - NODE_ENV=production
         networks:
-            - veion
+            - server_load_balancer
     veion_client:
-        container_name: veion_client
-        build: ./client
+        image: repo.treescale.com/veionteam/veion-client:1.0
         volumes:
             - ./client/proxy/nginx.conf:/etc/nginx/conf.d/default.conf
         env_file:
             - ./client/.env
         networks:
-            - veion
+            - server_load_balancer
 
 networks:
-    veion:
+    server_load_balancer:
+        external: true

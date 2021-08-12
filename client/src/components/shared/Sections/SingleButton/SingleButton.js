@@ -13,7 +13,7 @@ const SingleButton = ({ title, actionTitle, action }) => {
             <Container>
                 <Grid container alignItems="center" justify="space-around" spacing={3}>
                     <Grid item>
-                        <Typography variant='h4'>{title}</Typography>
+                        <Typography variant='h4' className={classes.title}>{title}</Typography>
                     </Grid>
                     <Grid item>
                         <OutlinedButton theme="primary" endIcon={<ArrowForwardIcon/>} onClick={action}>{actionTitle}</OutlinedButton>

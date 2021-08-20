@@ -13,6 +13,8 @@ services:
         image: repo.treescale.com/veionteam/veion-client:1.0
         volumes:
             - ./client/proxy/nginx.conf:/etc/nginx/conf.d/default.conf
+            - /etc/letsencrypt/live/veion.net/fullchain.pem:/certs/fullchain.pem
+            - /etc/letsencrypt/live/veion.net/privkey.pem:/certs/privkey.pem
         env_file:
             - ./client/.env
         networks:
